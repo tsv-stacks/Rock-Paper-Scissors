@@ -6,8 +6,8 @@ const rockbeatScissor = "You Win! Rock beats Scissors";
 const scissorBeatPaper = "You Win! Scissors beats Paper"
 const scissorLoseRock = "You Lose! Rock beats Scissors";
 const draw = "Draw!"
-let totalWins = 0
-let totalLoss = 0
+var totalWins = 0
+var totalLoss = 0
 let gameWon = undefined
 let youWon = "You've beaten the AI!"
 let youLost = "You've lost to the AI"
@@ -36,25 +36,26 @@ function playRound() {
 function winCounter() {
     if (gameWon == true && totalWins < 5) {
         totalWins += 1
+        if (totalWins === 5) {
+            youWonFunc()
+        } else {
         console.log("Wins: " + totalWins)
         console.log("Losses: " + totalLoss)
+        }
     } else if (gameWon == false && totalLoss < 5) {
         totalLoss += 1
+        if (totalLoss === 5) {
+                youLostFunc()
+            }
         console.log("Wins: " + totalWins)
         console.log("Losses: " + totalLoss)
-    } else if (totalWins == 5) {
-        console.log(youWon);
-        console.log("Wins: " + totalWins)
-        console.log("Losses: " + totalLoss)
-        totalWins = 0
-        totalLoss = 0
-    } else if (totalLoss === 5) {
-        console.log(youLost)
-        console.log("Wins: " + totalWins)
-        console.log("Losses: " + totalLoss)
-        totalWins = 0;
-        totalLoss = 0;
-    } else if (gameWon == undefined) {
+    }
+    // else if (totalWins === 5) {
+    //     youWonFunc()
+    // } else if (totalLoss === 5) {
+    //     youLostFunc()
+    // }
+    else if (gameWon == undefined) {
         gameWon = undefined;
         console.log("Wins: " + totalWins)
         console.log("Losses: " + totalLoss)
@@ -63,14 +64,21 @@ function winCounter() {
 //     console.log("Wins: " + totalWins)
 //     console.log("Losses: " + totalLoss)
 
+function youLostFunc() {
+    console.log(youLost)
+    console.log("Wins: " + totalWins)
+    console.log("Losses: " + totalLoss)
+    totalWins = 0;
+    totalLoss = 0;
+}
 
-
-
-// function game() {
-
-//     // playRound()
-//     // win()
-// }
+function youWonFunc(){
+    console.log(youWon);
+    console.log("Wins: " + totalWins)
+    console.log("Losses: " + totalLoss)
+    totalWins = 0
+    totalLoss = 0
+}
 
 function gameOutcome(playerSelection, computerSelection) {
 if (playerSelection == computerSelection) {
