@@ -16,8 +16,6 @@ playRound()
 function game() {
     gameWon = undefined
     playRound()
-    let gameResult = gameOutcome(playerSelection, computerSelection)
-    console.log(gameResult)
 }
 
 // console.log(getPlayerChoice())
@@ -27,8 +25,8 @@ function playRound() {
     console.log(computerSelection)
     let playerSelection = getPlayerChoice()
     console.log(playerSelection)
-    gameOutcome(playerSelection, computerSelection)
-    console.log(gameOutcome())
+    let gameResult = gameOutcome(playerSelection, computerSelection)
+    console.log(gameResult)
 }
 // wins and losses
 
