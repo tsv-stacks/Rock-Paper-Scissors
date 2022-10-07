@@ -9,13 +9,16 @@ const draw = "Draw!"
 let totalWins = 0
 let totalLoss = 0
 let gameWon = undefined
+let youWon = "You've beaten the AI!"
+let youLost = "You've lost to the AI"
 
-playRound()
-//game()
+//playRound()
+game()
 
 function game() {
     gameWon = undefined
     playRound()
+    winCounter()
 }
 
 // console.log(getPlayerChoice())
@@ -30,15 +33,33 @@ function playRound() {
 }
 // wins and losses
 
-// function win() {
-//     if (gameWon == true) {
-//        return totalWins += 1
-//     } else if (gameWon == false) {
-//         return totalLoss += 1
-//     } else {
-//         return undefined;
-//     }
-// }
+function winCounter() {
+    if (gameWon == true && totalWins < 5) {
+        totalWins += 1
+        console.log("Wins: " + totalWins)
+        console.log("Losses: " + totalLoss)
+    } else if (gameWon == false && totalLoss < 5) {
+        totalLoss += 1
+        console.log("Wins: " + totalWins)
+        console.log("Losses: " + totalLoss)
+    } else if (totalWins == 5) {
+        console.log(youWon);
+        console.log("Wins: " + totalWins)
+        console.log("Losses: " + totalLoss)
+        totalWins = 0
+        totalLoss = 0
+    } else if (totalLoss === 5) {
+        console.log(youLost)
+        console.log("Wins: " + totalWins)
+        console.log("Losses: " + totalLoss)
+        totalWins = 0;
+        totalLoss = 0;
+    } else if (gameWon == undefined) {
+        gameWon = undefined;
+        console.log("Wins: " + totalWins)
+        console.log("Losses: " + totalLoss)
+    }
+    }
 //     console.log("Wins: " + totalWins)
 //     console.log("Losses: " + totalLoss)
 
