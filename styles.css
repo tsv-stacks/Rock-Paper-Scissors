@@ -6,19 +6,28 @@ font-family: 'Sigmar One', cursive; */
     box-sizing: border-box;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("white-crumpled-lined-paper-background_53876-150112.webp");
+    background-position: center; /* Center the image */
+    /* background-repeat: no-repeat; Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
 h1 {
     font-family: 'Sigmar One', cursive;
     text-transform: uppercase;
     text-align: center;
 }
 
-h3 {
+h2 {
     text-align: center;
 }
 
 .image-selection {
     display: flex;
-
     justify-content: space-around;
     margin-left: 15%;
     margin-right: 15%;
@@ -30,11 +39,30 @@ h3 {
     border: 5px solid black;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    background-image: url("white-crumpled-lined-paper-background_53876-150112.webp");
-    background-position: center; /* Center the image */
-    /* background-repeat: no-repeat; Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+#game-choices {
+    display: flex;
+    margin-left: 20% ;
+    margin-right: 20%;
+    justify-content: space-evenly;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fa-icons {
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.me-tsvstacks {
+    margin-top: 0%;
 }

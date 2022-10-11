@@ -10,15 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1>Rock, Paper, Scissors!</h1>
-    <h3>First to 5 Wins!</h3>
+    <h2>First to 5 Wins!</h2>
 
     <div class="image-selection">
         <img src="/rock.png" alt="pciture of rock">
         <img src="/paper.png" alt="picture of paper">
         <img src="/scissors.png" alt="image of scissors">
+    </div>
+    <div id="game-choices">
+        <h2>Your Choice: </h2>
+        <h2>Computer Choice: </h2>
+    </div>
+    <div>
+
+    </div>
+    <div id="five-game-result">
+
     </div>
 
 
@@ -26,11 +37,15 @@
 
 
 
-
-    <button onclick="game()">New Game</button>
+    <!-- <button onclick="game()">New Game</button> -->
 
     <footer>
-        <p>Made by tsv-stacks</p>
+        <p>Copyright <a href="#" class="fa fa-copyright" style="color:black"></a> The Odin Project</p>
+        <p class="me-tsvstacks">Made by <a href="https://github.com/tsv-stacks">tsv-stacks</a></p>
+        <div class="fa-icons">
+            <a href="https://www.linkedin.com/in/tarndeep-virdi/" class="fa-2x fa fa-linkedin-square" style="color:black"></a>
+            <a href="https://github.com/tsv-stacks" class="fa-2x fa fa-github-square"style="color:black"></a>
+        </div>
     </footer>
 </body>
 </html>
