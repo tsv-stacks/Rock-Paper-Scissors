@@ -12,14 +12,14 @@ let gameWon = undefined
 let youWon = "You've beaten the AI!"
 let youLost = "You've lost to the AI"
 
-//playRound()
-game()
+playRound()
+// game()
 
-function game() {
-    gameWon = undefined
-    playRound()
-    winCounter()
-}
+// function game() {
+//     gameWon = undefined
+//     playRound()
+//     winCounter()
+// }
 
 // console.log(getPlayerChoice())
 // play round
@@ -39,14 +39,14 @@ function winCounter() {
         if (totalWins === 5) {
             youWonFunc()
         } else {
-        console.log("Wins: " + totalWins)
-        console.log("Losses: " + totalLoss)
+            console.log("Wins: " + totalWins)
+            console.log("Losses: " + totalLoss)
         }
     } else if (gameWon == false && totalLoss < 5) {
         totalLoss += 1
         if (totalLoss === 5) {
-                youLostFunc()
-            }
+            youLostFunc()
+        }
         console.log("Wins: " + totalWins)
         console.log("Losses: " + totalLoss)
     }
@@ -60,7 +60,7 @@ function winCounter() {
         console.log("Wins: " + totalWins)
         console.log("Losses: " + totalLoss)
     }
-    }
+}
 //     console.log("Wins: " + totalWins)
 //     console.log("Losses: " + totalLoss)
 
@@ -72,7 +72,7 @@ function youLostFunc() {
     totalLoss = 0;
 }
 
-function youWonFunc(){
+function youWonFunc() {
     console.log(youWon);
     console.log("Wins: " + totalWins)
     console.log("Losses: " + totalLoss)
@@ -81,38 +81,38 @@ function youWonFunc(){
 }
 
 function gameOutcome(playerSelection, computerSelection) {
-if (playerSelection == computerSelection) {
-    return draw;
-} else if (playerSelection == "rock" && computerSelection == "paper") {
-   gameWon = false;
-   return rockLosePaper;
-} else if (playerSelection == "rock" && computerSelection == "scissor") {
-   gameWon = true;
-   return rockbeatScissor;
-} else if (playerSelection == "paper" && computerSelection == "scissor") {
-   gameWon = false;
-   return paperLoseScissor;
-} else if (playerSelection == "paper" && computerSelection == "rock") {
-   gameWon = true;
-   return paperBeatRock;
-} else if (playerSelection == "scissor" && computerSelection == "rock") {
-    gameWon = false;
-    return scissorLoseRock;
-} else if (playerSelection == "scissor" && computerSelection == "paper") {
-   gameWon = true;
-   return scissorBeatPaper;
-}
+    if (playerSelection == computerSelection) {
+        return draw;
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
+        gameWon = false;
+        return rockLosePaper;
+    } else if (playerSelection == "rock" && computerSelection == "scissor") {
+        gameWon = true;
+        return rockbeatScissor;
+    } else if (playerSelection == "paper" && computerSelection == "scissor") {
+        gameWon = false;
+        return paperLoseScissor;
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
+        gameWon = true;
+        return paperBeatRock;
+    } else if (playerSelection == "scissor" && computerSelection == "rock") {
+        gameWon = false;
+        return scissorLoseRock;
+    } else if (playerSelection == "scissor" && computerSelection == "paper") {
+        gameWon = true;
+        return scissorBeatPaper;
+    }
 }
 
 // comp selection
 function getComputerChoice() {
     let randNumb = Math.floor(Math.random() * 3);
     return hands[randNumb];
- }
+}
 
 //  console.log(getComputerChoice())
 // player selection
-function getPlayerChoice(){
+function getPlayerChoice() {
     // let playerInput = prompt("Make your choice!")
     // return playerInput.toLowerCase();
     return prompt("Make your choice!").toLowerCase()

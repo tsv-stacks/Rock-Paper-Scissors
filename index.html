@@ -5,18 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
-    <script src="game.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="game.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Sigmar+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Rock, Paper, Scissors</h1>
+    <h1>Rock, Paper, Scissors!</h1>
     <h3>First to 5 Wins!</h3>
-    <p id="round-result"></p>
-    <p id="player-choice">
 
-    </p>
-    <p id="computer-choice">
+    <div class="image-selection">
+        <img src="/rock.png" alt="pciture of rock">
+        <img src="/paper.png" alt="picture of paper">
+        <img src="/scissors.png" alt="image of scissors">
+    </div>
 
-    </p>
+
+
+
+
+
+
     <button onclick="game()">New Game</button>
+
+    <footer>
+        <p>Made by tsv-stacks</p>
+    </footer>
 </body>
 </html>
