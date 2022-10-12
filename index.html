@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Rock, Paper, Scissors!</h1>
-    <h2 class="rules">First to 5 Wins!</h2>
+    <h2 class="rules"><span id="rules-span">First to 5 Wins!</span></h2>
 
     <div class="image-selection">
         <img src="rock.png" alt="picture of rock" onclick="rockSelected()">
@@ -34,12 +34,14 @@
         <h2>Losses: <span id="total-loss"></span></h2>
     </div>
 
-
-    <!-- <button onclick="game()">New Game</button> -->
     <!-- https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ -->
     <footer>
+        <div>
         <p>Copyright <a href="#" class="fa fa-copyright" style="color:black"></a> The Odin Project</p>
-        <p class="me-tsvstacks">Made by <a href="https://github.com/tsv-stacks">tsv-stacks</a></p>
+        </div>
+        <div>
+        <p class="me-tsvstacks">Made by <a href="https://github.com/tsv-stacks">TSV-Stacks</a></p>
+        </div>
         <div class="fa-icons">
             <a href="https://www.linkedin.com/in/tarndeep-virdi/" target="_blank" class="fa-2x fa fa-linkedin-square" style="color:black"></a>
             <a href="https://github.com/tsv-stacks" target="_blank" class="fa-2x fa fa-github-square"style="color:black"></a>

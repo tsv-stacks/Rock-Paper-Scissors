@@ -9,40 +9,49 @@ const draw = "Draw!"
 var totalWins = 0
 var totalLoss = 0
 let gameWon = undefined
-let youWon = "You've beaten the AI!"
-let youLost = "You've lost to the AI"
+const youWon = "You've beaten the A.I.!"
+const youLost = "You've lost to the AI"
 let playerChoiceOutput = document.getElementById("your-choice")
 let compChoiceOutput = document.getElementById("comp-choice")
 let roundResultOutput = document.getElementById("round-result")
 let playerSelection = ""
 let computerSelection = ""
+let winCounterOutput = document.getElementById("total-wins")
+let lossCounterOutput = document.getElementById("total-loss")
+let rulesOverwrite = document.getElementById("rules-span")
 
-// function playRound() {
-
-// }
 
 function rockSelected() {
+    // gameWon = undefined
+    rulesOverwrite.innerText = "First to 5 Wins!"
     playerChoiceOutput.innerText = " ROCK"
     playerSelection = "rock"
     computerSelection = getComputerChoice()
     let result = gameOutcome(playerSelection, computerSelection)
     roundResultOutput.innerText = result
+    winCounter()
 }
 
 function paperSelected() {
+    // gameWon = undefined
+    rulesOverwrite.innerText = "First to 5 Wins!"
     playerChoiceOutput.innerText = " PAPER"
     playerSelection = "paper"
     computerSelection = getComputerChoice()
     let result = gameOutcome(playerSelection, computerSelection)
     roundResultOutput.innerText = result
+    winCounter()
 }
 
 function scissorsSelected() {
+    // gameWon = undefined
+    rulesOverwrite.innerText = "First to 5 Wins!"
     playerChoiceOutput.innerText = " SCISSORS"
     playerSelection = "scissors"
     computerSelection = getComputerChoice()
     let result = gameOutcome(playerSelection, computerSelection)
     roundResultOutput.innerText = result
+    winCounter()
 }
 
 function winCounter() {
@@ -51,36 +60,38 @@ function winCounter() {
         if (totalWins === 5) {
             youWonFunc()
         } else {
-            console.log("Wins: " + totalWins)
-            console.log("Losses: " + totalLoss)
+            winCounterOutput.innerText = totalWins
+            lossCounterOutput.innerText = totalLoss
         }
     } else if (gameWon == false && totalLoss < 5) {
         totalLoss += 1
         if (totalLoss === 5) {
             youLostFunc()
+        } else {
+            winCounterOutput.innerText = totalWins
+            lossCounterOutput.innerText = totalLoss
         }
-        console.log("Wins: " + totalWins)
-        console.log("Losses: " + totalLoss)
+
     }
     else if (gameWon == undefined) {
         gameWon = undefined;
-        console.log("Wins: " + totalWins)
-        console.log("Losses: " + totalLoss)
+        winCounterOutput.innerText = totalWins
+        lossCounterOutput.innerText = totalLoss
     }
 }
 
 function youLostFunc() {
-    console.log(youLost)
-    console.log("Wins: " + totalWins)
-    console.log("Losses: " + totalLoss)
+    rulesOverwrite.innerText = youLost
+    winCounterOutput.innerText = totalWins
+    lossCounterOutput.innerText = totalLoss
     totalWins = 0;
     totalLoss = 0;
 }
 
 function youWonFunc() {
-    console.log(youWon);
-    console.log("Wins: " + totalWins)
-    console.log("Losses: " + totalLoss)
+    rulesOverwrite.innerText = youWon
+    winCounterOutput.innerText = totalWins
+    lossCounterOutput.innerText = totalLoss
     totalWins = 0
     totalLoss = 0
 }

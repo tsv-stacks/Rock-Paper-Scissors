@@ -1,7 +1,7 @@
 /* font-family: 'Kanit', sans-serif;
 font-family: 'Sigmar One', cursive; */
 * {
-    /* border: 2px red solid; */
+    border: 2px red solid;
     font-family: 'Kanit', sans-serif;
     box-sizing: border-box;
 }
@@ -14,7 +14,6 @@ body {
     /* background-repeat: no-repeat; Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
-
 
 h1 {
     font-family: 'Sigmar One', cursive;
@@ -91,14 +90,28 @@ h2 {
     font-size: xx-large;
 }
 
+#five-game-result {
+    display: flex;
+    margin-left: 20% ;
+    margin-right: 20%;
+    justify-content: space-evenly;
+}
+
 /* FOOTER */
 
 footer {
+    font-style: italic;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
     width: 100%;
+    height: 48px;
+    position: fixed;
+    bottom: 6px;
+
 }
 
 footer p {
-    margin-bottom: 0;
     text-align: center;
 }
 
@@ -106,8 +119,11 @@ footer p {
     display: flex;
     justify-content: center;
     color: black;
+    align-items: center;
 }
 
-.me-tsvstacks {
-    margin-top: 0%;
+@media screen and (max-height: 630px) {
+    footer {
+        position: initial
+    }
 }
