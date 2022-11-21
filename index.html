@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="uigamescript.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Sigmar+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <h1>Rock, Paper, Scissors!</h1>
     <h2 class="rules"><span id="rules-span">First to 5 Wins!</span></h2>
 
     <div class="image-selection">
-        <img src="rock.png" alt="picture of rock" onclick="rockSelected()">
-        <img src="paper.png" alt="picture of paper" onclick="paperSelected()">
-        <img src="scissors.png" alt="picture of scissors"
-        onclick="scissorsSelected()">
+      <img src="rock.png" alt="picture of rock" onclick="rockSelected()" />
+      <img src="paper.png" alt="picture of paper" onclick="paperSelected()" />
+      <img
+        src="scissors.png"
+        alt="picture of scissors"
+        onclick="scissorsSelected()"
+      />
     </div>
     <div id="game-choices">
-        <h2>Your Choice: <span id="your-choice"></span></h2>
-        <h2>Computer Choice:<span id="comp-choice"></span> </h2>
+      <h2>Your Choice: <span id="your-choice"></span></h2>
+      <h2>Computer Choice:<span id="comp-choice"></span></h2>
     </div>
     <div class="round-result-container">
-        <h2><span id="round-result"></span></h2>
+      <h2><span id="round-result"></span></h2>
     </div>
     <div id="five-game-result">
-        <h2>Wins: <span id="total-wins"></span></h2>
-        <h2>Losses: <span id="total-loss"></span></h2>
+      <h2>Wins: <span id="total-wins"></span></h2>
+      <h2>Losses: <span id="total-loss"></span></h2>
     </div>
-
-    <!-- https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ -->
     <footer>
-        <div>
-        <p>Copyright <a href="#" class="fa fa-copyright" style="color:black"></a> The Odin Project</p>
-        </div>
-        <div>
-        <p class="me-tsvstacks">Made by <a href="https://github.com/tsv-stacks">TSV-Stacks</a></p>
-        </div>
-        <div class="fa-icons">
-            <a href="https://www.linkedin.com/in/tarndeep-virdi/" target="_blank" class="fa-2x fa fa-linkedin-square" style="color:black"></a>
-            <a href="https://github.com/tsv-stacks" target="_blank" class="fa-2x fa fa-github-square"style="color:black"></a>
-        </div>
+      <div>
+        <p class="me-tsvstacks">
+          Made by <a href="https://github.com/tsv-stacks">TSV-Stacks</a>
+        </p>
+      </div>
+      <div class="fa-icons">
+        <a
+          href="https://www.linkedin.com/in/tarndeep-virdi/"
+          target="_blank"
+          class="fa-2x fa fa-linkedin-square"
+          style="color: black"
+        ></a>
+        <a
+          href="https://github.com/tsv-stacks"
+          target="_blank"
+          class="fa-2x fa fa-github-square"
+          style="color: black"
+        ></a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
