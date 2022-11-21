@@ -128,7 +128,14 @@ footer p {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+  }
+
   .image-selection {
     margin-left: 5%;
     margin-right: 5%;
