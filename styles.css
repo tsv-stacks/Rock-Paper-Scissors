@@ -8,6 +8,7 @@ font-family: 'Sigmar One', cursive; */
 
 body {
   height: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
   background-image: url("white-crumpled-lined-paper-background_53876-150112.webp");
